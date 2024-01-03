@@ -273,14 +273,14 @@ export const bottleBeers = [
     price: '4,50 €'
 },
 {
-    name : 'Nastro Azzurro Analcolica',
-    grade: '(0,5° 33cl)',
+    name : 'Nastro Azzurro Analcolica 33cl',
+    grade: '(0,5°)',
     description: '',
     price: '3,50 €'
 },
 {
-    name : 'Beck’s',
-    grade: '(5° 33cl)',
+    name : 'Beck’s 33cl',
+    grade: '(5°)',
     description: '',
     price: '4,00 €'
 },
@@ -292,66 +292,66 @@ export const bottleBeers = [
 
 export const draftDrinks = [
 {
-    name: 'Nastro Azzurro (20cl)',
+    name: 'Nastro Azzurro 20cl',
     grade: '(5,2°)',
     description: 'Birra di mais dal gusto semplice e rinfrescante, con finale leggermente amarognolo',
     price: '3,00 €'
 },
 {
-    name: 'Nastro Azzurro (40cl)',
+    name: 'Nastro Azzurro 40cl',
     grade: '(5,2°)',
     description: '',
     price: '4,00 €'
 },
 {
-    name: 'Ceres Red Erik (20cl)',
+    name: 'Ceres Red Erik 20cl',
     grade: '(6,5°)',
     description: 'Birra rossa dal gusto morbido e dolce, che ricorda la frutta fresca il malto e il caramello.',
     price: '3,50 €'
 },
 {
-    name: 'Ceres Red Erik (40cl)',
+    name: 'Ceres Red Erik 40cl',
     grade: '(6,5°)',
     description: '',
     price: '4,50 €'
 },
 {
-    name: 'Ceres Strong Ale (20cl)',
+    name: 'Ceres Strong Ale 20cl',
     grade: '(7,7°)',
     description: 'Birra bionda dal carattere forte, dal gusto pieno e intenso.',
     price: '3,50 €'
 },
 {
-    name: 'Ceres Strong Ale (40cl)',
+    name: 'Ceres Strong Ale 40cl',
     grade: '(7,7°)',
     description: '',
     price: '4,50 €'
 },
 {
-    name: 'Coca Cola (30cl)',
+    name: 'Coca Cola 30cl',
     grade: '',
     description: '',
     price: '3,00 €'
 },
 {
-    name: 'Coca Cola (40cl)',
+    name: 'Coca Cola 40cl',
     grade: '',
     description: '',
     price: '3,50 €'
 },
 {
-    name: 'Tè limone o pesca (33cl)',
+    name: 'Tè limone o pesca 33cl',
     grade: '',
-    description: '',
+    description: '(Bibita in lattina)',
     price: '3,50 €'
 },
 ]
 
 ///////////////
-//  DESSERT //
+//  DESSERTS //
 //////////////
 
-export const dessert = [
+export const desserts = [
     {
         name : 'Torta di mandorle',
         price: '3,50 €',
