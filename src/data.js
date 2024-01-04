@@ -229,7 +229,8 @@ export const originali = [
     },
     {
       name: 'FANTASIA',
-      ingredients: 'pomodoro, mozzarella, funghi champignon trifolati, salamino piccante, cipolla di Tropea, peperoni, gorgonzola dolce DOP, rucola, pancetta dolce, tonno (gusti separati composti a discrezione del pizzaiolo)',
+      ingredients: 'pomodoro, mozzarella, funghi champignon trifolati, salamino piccante, cipolla di Tropea, peperoni, gorgonzola dolce DOP, rucola,',
+      ingredientss:'pancetta dolce, tonno (gusti separati composti a discrezione del pizzaiolo)',
       price: '9,50 €'
     }
   ];
@@ -388,4 +389,47 @@ export const desserts = [
         name : 'Biscotti artiginali alla marmellata',
         price: '1,00 €',
     },
+]
+
+/////////////////////
+// CARTA DEI VINI //
+/////////////////////
+
+export const wines = [
+  {
+    name:'Cabernet DOC',
+    description:'(Cabernet sauvignon 80%-Cabertnet Franc 20%)',
+  },
+  {
+    name:'Merlot DOC',
+    description:'(Merlot 100%)',
+  },
+  {
+    name:'Pinot grigio DOC',
+    description:'(Pinot grigio 100%)',
+  },
+  {
+    name:'Pinello dei Colli Euganei DOC',
+    description:'(Pinella 100%. Vino biologico)',
+  },
+  {
+    name:'Fior d\'Arancio dei Colli Euganei DOCG',
+    description:'(100% Moscato giallo)',
+  },
+  {
+    name:'Prosecco DOCG Extra dry Millesimato',
+    description:'',
+  },
+  {
+    name:'Prosecco DOCG Brut Millesimato',
+    description:'',
+  },
+  {
+    name:'Prosecco DOCG Extra dry “Banda Rossa” Millesimato',
+    description:'',
+  },
+  {
+    name:'Milleuno Garda Rosso DOC',
+    description:'(Merlot Rebo)',
+  },
 ]
