@@ -1,5 +1,5 @@
 <script >
-import { antipasti, tradizionali, originali, speciali, bottleBeers, draftDrinks, desserts, wines } from "../data.js";
+import { antipasti, tradizionali, originali, speciali, bottleBeers, draftDrinks, cannedDrinks, bioDrinks, bottledDrinks, desserts, } from "../data.js";
 export default {
   data() {
     return {
@@ -10,15 +10,17 @@ export default {
       speciali,
       bottleBeers,
       draftDrinks,
+      cannedDrinks,
+      bioDrinks,
+      bottledDrinks,
       desserts,
-      wines
     };
   },
 };
 </script>
 
 <template>
-    <div class="container my-4">
+
         <!-- LOGO -->
         <div class="first-page">
             <img src="../../public/logo.jpg" alt="">
@@ -27,24 +29,20 @@ export default {
                 <div>Via Roma, 194 Albignasego (PD)</div>
                 <div>Tel: 049-710044</div>
             </div>
-            <div class="text-center blue-title fw-semibold my-4">
-                <div>Per i vini, abbiamo una carta dedicata! Richiedila al personale di sala!</div>
-                <div>Coperto 1,00 €</div>
-            </div>
         </div>
 
-        <div class="blue-line"></div>
+        <!-- <div class="blue-line"></div> -->
         <!-- ANTIPASTI -->
 
         <div class="blue-card shadow px-4 py-2 my-4">
-            <h2 class="blue-title text-center">Antipasti</h2>
+            <h3 class="blue-title text-center">Antipasti</h3>
             <div v-for="(antipasto, index) in antipasti" :key="index">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class='d-flex align-items-center' >
-                        <h4 class="me-2 fw-bold">
+                        <h6 class="me-2 fw-bold">
                             {{ antipasto.name }}
                             <span v-if="antipasto.ingredients !== ''">:</span>
-                        </h4>
+                        </h6>
                         <span class="fw-semibold">{{ antipasto.ingredients }}</span>
                     </div>
                     <span class="fw-bold">{{ antipasto.price }}</span>
@@ -52,16 +50,19 @@ export default {
             </div>
         </div>
 
-        <div class="blue-line"></div>
+        <!-- <div class="blue-line"></div> -->
         <!-- LE TRADIZIONALI -->
 
         <div class="my-4">
-            <h2 class="blue-title text-center">Le Tradizionali</h2>
+            <h3 class="blue-title text-center">Le Tradizionali</h3>
             <div v-for="(pizza, index) in tradizionali" :key="index">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class='d-flex align-items-center' >
-                        <h4 class="me-2 fw-bold">{{ pizza.name }} :</h4>
-                        <span class="fw-semibold">{{ pizza.ingredients }}</span>
+                        <h6 class="me-2 fw-bold">{{ pizza.name }} :</h6>
+                        <span class="fw-semibold">{{ pizza.ingredients }} 
+                            <br> 
+                            <span class="fw-semibold">{{ pizza.ingredients2 }}</span>
+                        </span>
                     </div>
                     <span class="fw-bold">{{ pizza.price }}</span>
                 </div>
@@ -72,18 +73,18 @@ export default {
 
         <div class="text-muted fw-semibold my-4">{{ textMuted }}</div>
 
-        <div class="blue-line"></div>
+        <!-- <div class="blue-line"></div> -->
         <!-- LE ORIGINALI -->
 
         <div class="my-4">
-            <h2 class="blue-title text-center">Le Originali</h2>
+            <h3 class="blue-title text-center">Le Originali</h3>
             <div v-for="(pizza, index) in originali" :key="index">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class='d-flex align-items-center' >
-                        <h5 class="me-2 fw-bold">{{ pizza.name }} :</h5>
+                        <h6 class="me-2 fw-bold">{{ pizza.name }} :</h6>
                         <span class="fw-semibold">{{ pizza.ingredients }} 
                             <br> 
-                            <span class="fw-semibold">{{ pizza.ingredientss }}</span>
+                            <span class="fw-semibold">{{ pizza.ingredients2 }}</span>
                         </span>
                     </div>
                     
@@ -92,39 +93,49 @@ export default {
             </div>
         </div>
 
-        <div class="blue-line"></div>
+        <!-- <div class="blue-line"></div> -->
         <!-- LE SPECIALI -->
 
         <div class="my-4">
-            <h2 class="blue-title text-center">Le Speciali</h2>
+            <h3 class="blue-title text-center">Le Speciali</h3>
             <div v-for="(pizza, index) in speciali" :key="index">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class='d-flex align-items-center' >
-                        <h5 class="me-2 fw-bold">{{ pizza.name }} :</h5>
-                        <span class="fw-semibold">{{ pizza.ingredients }}</span>
+                        <h6 class="me-2 mt-2 fw-bold">{{ pizza.name }} :</h6>
+                        <span class="fw-semibold mt-2">{{ pizza.ingredients }} 
+                            <br> 
+                            <span class="fw-semibold">{{ pizza.ingredients2 }}</span>
+                        </span>
                     </div>
                     <span class="fw-bold">{{ pizza.price }}</span>
                 </div>
+
+                <span class="fw-bold">
+                    {{ pizza.details }}
+                </span>
             </div>
         </div>
 
-        <div class="blue-line"></div>
+        <!-- <div class="blue-line"></div> -->
         <!-- DA BERE -->
 
         <div class="blue-card shadow px-4 py-2 my-4">
 
             <!-- BIRRE IN BOTTIGLIA  -->
 
-            <h2 class="blue-title text-center">Birre in bottiglia</h2>
+            <h3 class="blue-title text-center">Birre in bottiglia</h3>
             <div v-for="(bibita, index) in bottleBeers" :key="index">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class='d-flex align-items-center' >
-                        <h4 class="me-1 fw-bold">{{ bibita.name }}</h4>
+                        <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
                         <span class="me-2 fw-semibold">
                             {{ bibita.grade }}
                             <span v-if="bibita.description !== ''">:</span>
                         </span>
-                        <span class="fw-semibold">{{ bibita.description }}</span>
+                        <span class="fw-semibold">{{ bibita.description }} 
+                            <br> 
+                            <span class="fw-semibold">{{ bibita.description2 }}</span>
+                        </span>
                     </div>
                     <span class="fw-bold">{{ bibita.price }}</span>
                 </div>
@@ -132,18 +143,67 @@ export default {
 
             <!-- BIBITE ALLA SPINA -->
 
-            <h2 class="blue-title text-center">Bibite alla spina</h2>
+            <h3 class="blue-title text-center">Bibite alla spina</h3>
             <div v-for="(bibita, index) in draftDrinks" :key="index">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class='d-flex align-items-center' >
-                        <h4 class="me-1 fw-bold">{{ bibita.name }}</h4>
+                        <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
                         <span class="me-2 fw-semibold">
                             {{ bibita.grade }} 
                             <span v-if="bibita.description !== ''">:</span>
                         </span>
-                        <span class="fw-semibold">{{ bibita.description }}</span>
+                        <span class="fw-semibold">{{ bibita.description }} 
+                            <br> 
+                            <span class="fw-semibold">{{ bibita.description2 }}</span>
+                        </span>
                     </div>
                     <span class="fw-bold">{{ bibita.price }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="blue-card shadow px-2 py-2 my-4 d-flex justify-content-between ">
+
+            <!-- BIBITE IN BOTTIGLIA  -->
+            <div>
+                <h3 class="blue-title">Bibite in bottiglia</h3>
+                <div v-for="(bibita, index) in bottledDrinks" :key="index">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class='d-flex align-items-center' >
+                            <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
+                        </div>
+                        <span class="fw-bold">{{ bibita.price }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BIBITE BIO -->
+
+            <div>
+                <h3 class="blue-title text-center">Bibite Bio <font-awesome-icon :icon="['fas', 'seedling']" style="color: #1f5132;" /></h3>
+                <div v-for="(bibita, index) in bioDrinks" :key="index">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class='d-flex align-items-center' >
+                            <h6 class="me-1 fw-bold">
+                                {{ bibita.name }} 
+                            </h6>
+                        </div>
+                        <span class="fw-bold ms-2">{{ bibita.price }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BIBITE LATTINA -->
+
+            <div>
+                <h3 class="blue-title">Bibite in lattina</h3>
+                <div v-for="(bibita, index) in cannedDrinks" :key="index">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class='d-flex align-items-center' >
+                            <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
+                        </div>
+                        <span class="fw-bold ms-2">{{ bibita.price }}</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,20 +212,25 @@ export default {
 
         <div class="text-muted fw-semibold my-4">{{ textMuted }}</div>
 
-        <div class="blue-line"></div>
+        <!-- <div class="blue-line"></div> -->
         <!-- DESSERT -->
         
-          <div class="my-4 dessert-container">
-            <h2 class="blue-title text-center">Dessert</h2>
+          <div class="my-5 dessert-container">
+            <h3 class="blue-title text-center">Dessert</h3>
             <div v-for="(dessert, index) in desserts" :key="index">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class='d-flex align-items-center' >
-                        <h5 class="me-2 fw-bold">{{ dessert.name }}</h5>
+                        <h6 class="me-2 fw-bold">{{ dessert.name }}</h6>
                         <span class="fw-semibold">{{ dessert.ingredients }}</span>
                     </div>
                     <span class="fw-bold">{{ dessert.price }}</span>
                 </div>
             </div>
+        </div>
+
+        <div class="text-center blue-title fw-semibold my-5">
+            <div>Per i vini, abbiamo una carta dedicata! <br> Richiedila al personale di sala!</div>
+            <div>Coperto 1,00 €</div>
         </div>
 
         <!-- CARTA DEI VINI -->
@@ -232,8 +297,8 @@ export default {
 
             <!-- AZIENDA AGRICOLA REASSI -->
 
-            <div class="row">
-                <table class="table table-striped mt-4 w-50">
+            <div class="row justify-content-center">
+                <table class="table table-striped mt-4 w-48">
                     <thead>
                         <tr class="text-center">
                         <th class="blue-title" scope="col">
@@ -260,7 +325,7 @@ export default {
 
                 <!-- VIGNA RODA -->
 
-                <table class="table table-striped mt-4 w-50">
+                <table class="table table-striped mt-4 w-48">
                     <thead>
                         <tr class="text-center">
                         <th class="blue-title" scope="col">
@@ -288,8 +353,8 @@ export default {
 
             <!-- BORTOLOMIOL -->
 
-            <div class="row">
-                <table class="table table-striped mt-4 w-50">
+            <div class="row justify-content-center">
+                <table class="table table-striped mt-4 w-48">
                     <thead>
                         <tr class="text-center">
                         <th class="blue-title" scope="col">
@@ -333,7 +398,7 @@ export default {
 
                 <!-- PRATELLO -->
 
-                <table class="table table-striped mt-4 w-50">
+                <table class="table table-striped mt-4 w-48">
                     <thead>
                         <tr class="text-center">
                         <th class="blue-title" scope="col">
@@ -359,7 +424,7 @@ export default {
                 </table>
             </div>
         </div>
-    </div>
+    
 </template>
 
 <style scoped>
@@ -369,6 +434,10 @@ export default {
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+span{
+    font-size: 0.75rem;
+    margin-bottom: 8px;
 }
 .dessert-container{
     width: 50%;
@@ -384,6 +453,7 @@ export default {
 .blue-card{
     background-color: #C6D9F1;
     border: 10px solid #1F497D;
+    border-radius: 10px;
 }
 .blue-line{
     width: 80%;
@@ -396,5 +466,11 @@ export default {
 td{
     font-weight: 600 !important;
     text-align: center;
+}
+.w-48{
+    width: 49%;
+}
+.text-muted{
+    font-size: 0.75rem !important;
 }
 </style>

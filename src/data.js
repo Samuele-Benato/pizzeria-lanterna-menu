@@ -47,53 +47,54 @@ export const antipasti = [
 export const tradizionali = [
     {
       name: 'BOSCAIOLA',
-      ingredients: 'pomodoro, mozzarella, champignon trifolati, porcini, chiodini, shiitake, volvariella, sbrise (funghi in proporzione variabile)',
-      price: '8 €'
+      ingredients: 'pomodoro, mozzarella, champignon trifolati, porcini, chiodini, shiitake, volvariella, sbrise',
+      ingredients2: '(funghi in proporzione variabile)',
+      price: '8,00 €'
     },
     {
       name: 'BRESAOLA, RUCOLA E GRANA',
       ingredients: 'pomodoro, mozzarella, bresaola della Valtellina IGP, rucola, grana',
-      price: '8,5 €'
+      price: '8,50 €'
     },
     {
       name: 'BRIE SPECK',
       ingredients: 'pomodoro, mozzarella, Brie, speck trentino',
-      price: '8 €'
+      price: '8,00 €'
     },
     {
       name: 'CALZONE',
       ingredients: 'mozzarella, prosciutto cotto, funghi champignon trifolati, carciofini a fine cottura, pomodoro',
-      price: '8 €'
+      price: '8,00 €'
     },
     {
       name: 'CAPRICCIOSA',
       ingredients: 'pomodoro, mozzarella, prosciutto cotto, champignon trifolati, carciofini',
-      price: '8 €'
+      price: '8,00 €'
     },
     {
       name: 'CHIODINI',
       ingredients: 'pomodoro, mozzarella, funghi chiodini',
-      price: '6,5 €'
+      price: '6,50 €'
     },
     {
       name: 'DIAVOLA',
       ingredients: 'pomodoro, mozzarella, salamino piccante',
-      price: '6 €'
+      price: '6,00 €'
     },
     {
       name: 'FUNGHI',
       ingredients: 'pomodoro, mozzarella, champignon trifolati',
-      price: '6,5 €'
+      price: '6,50 €'
     },
     {
       name: 'GORGONZOLA',
       ingredients: 'pomodoro, mozzarella, gorgonzola dolce DOP',
-      price: '6 €'
+      price: '6,00 €'
     },
     {
       name: 'INGLESINA',
       ingredients: 'pomodoro, mozzarella, prosciutto crudo di Parma',
-      price: '7,5 €'
+      price: '7,50 €'
     },
     {
       name: 'MARGHERITA',
@@ -103,92 +104,92 @@ export const tradizionali = [
     {
       name: 'MARINARA',
       ingredients: 'pomodoro, aglio, origano',
-      price: '4 €'
+      price: '4,00 €'
     },
     {
       name: 'MELANZANE',
       ingredients: 'pomodoro, mozzarella, melanzane ai ferri',
-      price: '6 €'
+      price: '6,00 €'
     },
     {
       name: 'PEPERONI',
       ingredients: 'pomodoro, mozzarella, peperoni',
-      price: '6 €'
+      price: '6,00 €'
     },
     {
       name: 'PORCINI',
       ingredients: 'pomodoro, mozzarella, funghi porcini',
-      price: '7 €'
+      price: '7,00 €'
     },
     {
       name: 'PROSCIUTTO',
       ingredients: 'pomodoro, mozzarella, prosciutto cotto',
-      price: '6 €'
+      price: '6,00 €'
     },
     {
       name: 'PROSCIUTTO E FUNGHI',
       ingredients: 'pomodoro, mozzarella, prosciutto cotto, champignon trifolati',
-      price: '7,5 €'
+      price: '7,50 €'
     },
     {
       name: 'PROVINCIALE',
       ingredients: 'pomodoro, mozzarella, acciughe, olive nere intere, origano',
-      price: '6,5 €'
+      price: '6,50 €'
     },
     {
       name: 'PUGLIESE',
       ingredients: 'pomodoro, mozzarella, cipolla di Tropea',
-      price: '6 €'
+      price: '6,00 €'
     },
     {
       name: '4 FORMAGGI',
       ingredients: 'pomodoro, mozzarella, crema di formaggi (No Gorgonzola)',
-      price: '6 €'
+      price: '6,00 €'
     },
     {
       name: '4 STAGIONI',
       ingredients: 'pomodoro, mozzarella, prosciutto cotto, champignon trifolati, carciofini (gusti separati)',
-      price: '8 €'
+      price: '8,00 €'
     },
     {
       name: 'RADICCHIO',
       ingredients: 'pomodoro, mozzarella, radicchio rosso spadone Treviso (solo stagionale)',
-      price: '6,5 €'
+      price: '6,50 €'
     },
     {
       name: 'RICOTTA E SPINACI',
       ingredients: 'pomodoro, mozzarella, ricotta, spinaci',
-      price: '6,5 €'
+      price: '6,50 €'
     },
     {
       name: 'ROMANA',
       ingredients: 'pomodoro, mozzarella, acciughe, origano',
-      price: '6 €'
+      price: '6,00 €'
     },
     {
       name: 'TIROLESE',
       ingredients: 'pomodoro, mozzarella, speck trentino',
-      price: '7,5 €'
+      price: '7,50 €'
     },
     {
       name: 'TONNO E CIPOLLA',
       ingredients: 'pomodoro, mozzarella, cipolla di Tropea, tonno',
-      price: '7,5 €'
+      price: '7,50 €'
     },
     {
       name: 'UOVO E ASPARAGI',
       ingredients: 'pomodoro, mozzarella, asparagi bianchi, uovo',
-      price: '6,5 €'
+      price: '6,50 €'
     },
     {
       name: 'VIENNESE',
       ingredients: 'pomodoro, mozzarella, wurstel',
-      price: '6 €'
+      price: '6,00 €'
     },
     {
       name: 'VEGETARIANA',
       ingredients: 'pomodoro, mozzarella, champignon trifolati, peperoni, carciofini, asparagi',
-      price: '8 €'
+      price: '8,00 €'
     }
   ];
   
@@ -199,7 +200,8 @@ export const tradizionali = [
 export const originali = [
     {
       name: '100 CITTÀ',
-      ingredients: 'pomodoro, mozzarella, prosciutto cotto, funghi champignon trifolati, carciofini, wurstel, salamino piccante, uovo',
+      ingredients: 'pomodoro, mozzarella, prosciutto cotto, funghi champignon trifolati,',
+      ingredients2:' carciofini, wurstel, salamino piccante, uovo',
       price: '9,50 €'
     },
     {
@@ -214,7 +216,8 @@ export const originali = [
     },
     {
       name: 'TREVIGIANA',
-      ingredients: 'pomodoro, mozzarella, radicchio rosso spadone Treviso, gorgonzola dolce DOP, pancetta dolce (solo stagionale)',
+      ingredients: 'pomodoro, mozzarella, radicchio rosso spadone Treviso, gorgonzola dolce DOP,',
+      ingredients2: 'pancetta dolce (solo stagionale)',
       price: '9,00 €'
     },
     {
@@ -229,8 +232,8 @@ export const originali = [
     },
     {
       name: 'FANTASIA',
-      ingredients: 'pomodoro, mozzarella, funghi champignon trifolati, salamino piccante, cipolla di Tropea, peperoni, gorgonzola dolce DOP, rucola,',
-      ingredientss:'pancetta dolce, tonno (gusti separati composti a discrezione del pizzaiolo)',
+      ingredients: 'pomodoro, mozzarella, funghi champignon trifolati, salamino piccante, cipolla di Tropea, peperoni,',
+      ingredients2:'gorgonzola dolce DOP, rucola, pancetta dolce, tonno (gusti separati composti a discrezione del pizzaiolo)',
       price: '9,50 €'
     }
   ];
@@ -241,23 +244,28 @@ export const originali = [
 
 export const speciali = [
 {
-    name: 'FAGOTTO LANTERNA',
-    ingredients: 'mozzarella, melanzane*, funghi champignon trifolati, gorgonzola dolce DOP a fine cottura: pomodoro, pancetta dolce, grana',
+    name: '1. FAGOTTO LANTERNA',
+    ingredients: 'mozzarella, melanzane*, funghi champignon trifolati, gorgonzola dolce DOP',
+    ingredients2:'a fine cottura: pomodoro, pancetta dolce, grana',
+    details:'L’unico originale, creato più di vent’anni fa nel nostro forno',
     price: '10,00 €'
 },
 {
-    name: 'DISCO VOLANTE',
+    name: '2. DISCO VOLANTE',
     ingredients: 'mozzarella, prosciutto cotto, funghi champignon trifolati, carciofini a fine cottura: pomodoro',
+    details:'Il disco volante è una pizza composta da due dischi di pasta di pizza con abbondante farcitura interna',
     price: '18,00 €'
 },
 {
-    name: 'PANINO',
+    name: '3. PANINO',
     ingredients: 'pane di pasta di pizza, olio al pomodoro, mozzarella, prosciutto crudo di Parma',
+    details:'Un nostro prodotto storico, dal cuore soffice.(sono possibili varie farciture!)',
     price: '7,50 €'
 },
 {
-    name: 'CROSTINO',
+    name: '4. CROSTINO',
     ingredients: 'pane bianco, pomodoro, mozzarella, prosciutto cotto',
+    details:'Un prodotto antico, cotto su tegamino come da tradizione',
     price: '7,50 €'
 }
 ];
@@ -270,7 +278,8 @@ export const bottleBeers = [
 {
     name : 'Weihenstephaner Hefe',
     grade: '(5,4°)',
-    description: 'Birra di frumento torbida. Dal gusto rotondo e rinfrescante con note di frutta matura e spezie',
+    description: 'Birra di frumento torbida.',
+    description2: 'Dal gusto rotondo e rinfrescante con note di frutta matura e spezie',
     price: '4,50 €'
 },
 {
@@ -295,7 +304,8 @@ export const draftDrinks = [
 {
     name: 'Nastro Azzurro 20cl',
     grade: '(5,2°)',
-    description: 'Birra di mais dal gusto semplice e rinfrescante, con finale leggermente amarognolo',
+    description: 'Birra di mais dal gusto semplice e rinfrescante,',
+    description2: 'con finale leggermente amarognolo',
     price: '3,00 €'
 },
 {
@@ -307,7 +317,8 @@ export const draftDrinks = [
 {
     name: 'Ceres Red Erik 20cl',
     grade: '(6,5°)',
-    description: 'Birra rossa dal gusto morbido e dolce, che ricorda la frutta fresca il malto e il caramello.',
+    description: 'Birra rossa dal gusto morbido e dolce,',
+    description2: ' che ricorda la frutta fresca il malto e il caramello.',
     price: '3,50 €'
 },
 {
@@ -340,13 +351,56 @@ export const draftDrinks = [
     description: '',
     price: '3,50 €'
 },
-{
+]
+
+////////////////////////////
+//   BIBITE BOTTIGLIETTA //
+///////////////////////////
+
+export const bottledDrinks = [
+  {
+    name: 'Coca Cola 33cl',
+    price: '3,00 €'
+  },
+  {
+    name: 'Acqua 50cl',
+    price: '2,00 €'
+  },
+  {
+    name: 'Acqua 100cl',
+    price: '3,00 €'
+  },
+]
+///////////////////////
+//   BIBITE LATTINA //
+//////////////////////
+
+export const cannedDrinks =[
+  {
     name: 'Tè limone o pesca 33cl',
-    grade: '',
-    description: '(Bibita in lattina)',
     price: '3,50 €'
 },
 ]
+
+export const bioDrinks =[
+  {
+    name: 'Limonata 35cl',
+    price: '3,80 €'
+  },
+  {
+    name: 'Chinò 35cl',
+    price: '3,80 €'
+  },
+  {
+    name: 'Acqua tonica 35cl',
+    price: '3,80 €'
+  },
+  {
+    name: 'Aranciata "Galavina" 35cl',
+    price: '3,80 €'
+  },
+]
+
 
 ///////////////
 //  DESSERTS //
