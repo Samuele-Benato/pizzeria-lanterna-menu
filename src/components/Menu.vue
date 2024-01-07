@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-
+    <div class="">
         <!-- LOGO -->
         <div class="first-page">
             <img src="../../public/logo.jpg" alt="">
@@ -50,6 +50,101 @@ export default {
             </div>
         </div>
 
+        <!-- DA BERE -->
+
+        <div class="blue-card shadow px-4 py-2 my-4">
+
+        <!-- BIRRE IN BOTTIGLIA  -->
+
+        <h3 class="blue-title text-center">Birre in bottiglia</h3>
+        <div v-for="(bibita, index) in bottleBeers" :key="index">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class='d-flex align-items-center' >
+                    <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
+                    <span class="me-2 fw-semibold">
+                        {{ bibita.grade }}
+                        <span v-if="bibita.description !== ''">:</span>
+                    </span>
+                    <span class="fw-semibold">{{ bibita.description }} 
+                        <br> 
+                        <span class="fw-semibold">{{ bibita.description2 }}</span>
+                    </span>
+                </div>
+                <span class="fw-bold">{{ bibita.price }}</span>
+            </div>
+        </div>
+
+        <!-- BIBITE ALLA SPINA -->
+
+        <h3 class="blue-title text-center">Bibite alla spina</h3>
+        <div v-for="(bibita, index) in draftDrinks" :key="index">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class='d-flex align-items-center' >
+                    <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
+                    <span class="me-2 fw-semibold">
+                        {{ bibita.grade }} 
+                        <span v-if="bibita.description !== ''">:</span>
+                    </span>
+                    <span class="fw-semibold">{{ bibita.description }} 
+                        <br> 
+                        <span class="fw-semibold">{{ bibita.description2 }}</span>
+                    </span>
+                </div>
+                <span class="fw-bold">{{ bibita.price }}</span>
+            </div>
+        </div>
+        </div>
+
+        <div class="blue-card shadow px-2 py-2 my-4 d-flex justify-content-between ">
+
+        <!-- BIBITE IN BOTTIGLIA  -->
+        <div>
+            <h3 class="blue-title">Bibite in bottiglia</h3>
+            <div v-for="(bibita, index) in bottledDrinks" :key="index">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class='d-flex align-items-center' >
+                        <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
+                    </div>
+                    <span class="fw-bold">{{ bibita.price }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BIBITE BIO -->
+
+        <div>
+            <h3 class="blue-title text-center">Bibite Bio Galavina <font-awesome-icon :icon="['fas', 'seedling']" style="color: #1f5132;" /></h3>
+            <div v-for="(bibita, index) in bioDrinks" :key="index">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class='d-flex align-items-center' >
+                        <h6 class="me-1 fw-bold">
+                            {{ bibita.name }} 
+                        </h6>
+                    </div>
+                    <span class="fw-bold ms-2">{{ bibita.price }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BIBITE LATTINA -->
+
+        <div>
+            <h3 class="blue-title">Bibite in lattina</h3>
+            <div v-for="(bibita, index) in cannedDrinks" :key="index">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class='d-flex align-items-center' >
+                        <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
+                    </div>
+                    <span class="fw-bold ms-2">{{ bibita.price }}</span>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- INTOLLERANZE -->
+
+        <div class="text-muted fw-semibold my-4 fs-6 text-center">{{ textMuted }}</div>
+
         <!-- <div class="blue-line"></div> -->
         <!-- LE TRADIZIONALI -->
 
@@ -71,7 +166,7 @@ export default {
 
         <!-- INTOLLERANZE -->
 
-        <div class="text-muted fw-semibold my-4">{{ textMuted }}</div>
+        <div class="text-muted fw-semibold my-4 fs-6 text-center">{{ textMuted }}</div>
 
         <!-- <div class="blue-line"></div> -->
         <!-- LE ORIGINALI -->
@@ -117,100 +212,7 @@ export default {
         </div>
 
         <!-- <div class="blue-line"></div> -->
-        <!-- DA BERE -->
-
-        <div class="blue-card shadow px-4 py-2 my-4">
-
-            <!-- BIRRE IN BOTTIGLIA  -->
-
-            <h3 class="blue-title text-center">Birre in bottiglia</h3>
-            <div v-for="(bibita, index) in bottleBeers" :key="index">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class='d-flex align-items-center' >
-                        <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
-                        <span class="me-2 fw-semibold">
-                            {{ bibita.grade }}
-                            <span v-if="bibita.description !== ''">:</span>
-                        </span>
-                        <span class="fw-semibold">{{ bibita.description }} 
-                            <br> 
-                            <span class="fw-semibold">{{ bibita.description2 }}</span>
-                        </span>
-                    </div>
-                    <span class="fw-bold">{{ bibita.price }}</span>
-                </div>
-            </div>
-
-            <!-- BIBITE ALLA SPINA -->
-
-            <h3 class="blue-title text-center">Bibite alla spina</h3>
-            <div v-for="(bibita, index) in draftDrinks" :key="index">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class='d-flex align-items-center' >
-                        <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
-                        <span class="me-2 fw-semibold">
-                            {{ bibita.grade }} 
-                            <span v-if="bibita.description !== ''">:</span>
-                        </span>
-                        <span class="fw-semibold">{{ bibita.description }} 
-                            <br> 
-                            <span class="fw-semibold">{{ bibita.description2 }}</span>
-                        </span>
-                    </div>
-                    <span class="fw-bold">{{ bibita.price }}</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="blue-card shadow px-2 py-2 my-4 d-flex justify-content-between ">
-
-            <!-- BIBITE IN BOTTIGLIA  -->
-            <div>
-                <h3 class="blue-title">Bibite in bottiglia</h3>
-                <div v-for="(bibita, index) in bottledDrinks" :key="index">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class='d-flex align-items-center' >
-                            <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
-                        </div>
-                        <span class="fw-bold">{{ bibita.price }}</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BIBITE BIO -->
-
-            <div>
-                <h3 class="blue-title text-center">Bibite Bio <font-awesome-icon :icon="['fas', 'seedling']" style="color: #1f5132;" /></h3>
-                <div v-for="(bibita, index) in bioDrinks" :key="index">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class='d-flex align-items-center' >
-                            <h6 class="me-1 fw-bold">
-                                {{ bibita.name }} 
-                            </h6>
-                        </div>
-                        <span class="fw-bold ms-2">{{ bibita.price }}</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BIBITE LATTINA -->
-
-            <div>
-                <h3 class="blue-title">Bibite in lattina</h3>
-                <div v-for="(bibita, index) in cannedDrinks" :key="index">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class='d-flex align-items-center' >
-                            <h6 class="me-1 fw-bold">{{ bibita.name }}</h6>
-                        </div>
-                        <span class="fw-bold ms-2">{{ bibita.price }}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- INTOLLERANZE -->
-
-        <div class="text-muted fw-semibold my-4">{{ textMuted }}</div>
+        
 
         <!-- <div class="blue-line"></div> -->
         <!-- DESSERT -->
@@ -228,10 +230,11 @@ export default {
             </div>
         </div>
 
-        <div class="text-center blue-title fw-semibold my-5">
-            <div>Per i vini, abbiamo una carta dedicata! <br> Richiedila al personale di sala!</div>
-            <div>Coperto 1,00 €</div>
-        </div>
+
+
+        <!-- INTOLLERANZE -->
+
+        <div class="text-muted fw-semibold my-4 fs-6 text-center">{{ textMuted }}</div>
 
         <!-- CARTA DEI VINI -->
         <div class="wine-container">
@@ -424,7 +427,7 @@ export default {
                 </table>
             </div>
         </div>
-    
+    </div>
 </template>
 
 <style scoped>

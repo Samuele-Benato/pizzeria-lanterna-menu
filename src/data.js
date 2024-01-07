@@ -396,7 +396,7 @@ export const bioDrinks =[
     price: '3,80 €'
   },
   {
-    name: 'Aranciata "Galavina" 35cl',
+    name: 'Aranciata 35cl',
     price: '3,80 €'
   },
 ]
